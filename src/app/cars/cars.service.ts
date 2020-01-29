@@ -1,11 +1,18 @@
 import { Injectable } from '@angular/core';
-import {Observable} from "rxjs";
-import {Car} from "./models/car";
+import { HttpClient, HttpParams } from '@angular/common/http';
+import {Observable} from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class CarsService {
 
-  constructor() { }
+  apiUrl: string = '/cars';
+
+  constructor(private http: HttpClient) { }
+
+  getCars(): Observable<Array<any>> {
+    return  this.http.get<Array<any>>(`${this.apiUrl}`);
+  }
 }
