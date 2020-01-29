@@ -17,7 +17,19 @@ export class CarsService {
     return this.http.get<Array<Car>>(`${this.apiUrl}`);
   }
 
-  getCarById(id: number) {
-    return this.http.get<Array<Car>>(`${this.apiUrl}/${ id }`);
+  getCarById(id: number): Observable<Car> {
+    return this.http.get<Car>(`${this.apiUrl}/${ id }`);
+  }
+
+  getCarByColor(color: string): Observable<Array<Car>> {
+    return this.http.get<Array<Car>>(`${this.apiUrl}/color/${color}`);
+  }
+
+  addNewCar(newCar: Car): Observable<Car> {
+    return this.http.post<Car>(`${this.apiUrl}`, newCar);
+  }
+
+  deleteCarById(id: number): Observable<Car> {
+    return this.http.delete<Car>(`${this.apiUrl}/{id}`);
   }
 }
