@@ -10,19 +10,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let car of cars | async; let i=index">
-          <td>{{car?.mark}}</td>
-          <td>{{car?.model}}</td>
-          <td>{{car?.color}}</td>
+        <tr *ngFor="let car of cars | async">
+          <td>{{car.mark}}</td>
+          <td>{{car.model}}</td>
+          <td>{{car.color}}</td>
         </tr>
         </tbody>
       </table>
-
-      <ng-template #noCarsInfo>
-        <div class="no-cars-info">
-          <h3>Currently no cars in database</h3>
-        </div>
-      </ng-template>
     </div>
   </div>
 </div>
