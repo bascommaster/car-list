@@ -8,14 +8,19 @@
     <div class="row form-group">
       <label>Mark</label>
       <input formControlName="mark" type="text" class="form-control" placeholder="mark">
+      <p *ngIf="!carForm.get('mark').valid && carForm.get('mark').dirty" class="error">This field is required!</p>
+
       <label>Model</label>
-      <input  formControlName="model" type="text" class="form-control" placeholder="model">
+      <input formControlName="model" type="text" class="form-control" placeholder="model">
+      <p *ngIf="!carForm.get('model').valid && carForm.get('model').dirty" class="error">This field is required!</p>
+
       <label>Color</label>
       <input formControlName="color" type="text" class="form-control" placeholder="color">
+      <p *ngIf="!carForm.get('color').valid && carForm.get('color').dirty" class="error">This field is required!</p>
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <button class="btn btn-primary" type="submit">add car</button>
+        <button [disabled] ="carForm.invalid" class="btn btn-primary" type="submit">add car</button>
       </div>
     </div>
   </form>
