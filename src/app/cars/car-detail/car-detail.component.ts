@@ -27,7 +27,9 @@ export class CarDetailComponent implements OnInit {
     //   console.log(car);
     // });
 
-    this.car = this.route.snapshot.data['car']
+    // this line is used becouse of resolve.service
+    this.car = this.route.snapshot.data['car'];
+    console.log(this.car);
   }
 
 }

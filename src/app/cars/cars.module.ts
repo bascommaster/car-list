@@ -5,11 +5,12 @@ import { SharedModule } from '../shared/shared.module';
 import { CarDetailComponent } from './car-detail/car-detail.component';
 import { RouterModule } from '@angular/router';
 import { CarResolve } from './car-resolve.service';
+import { AddCarComponent } from './add-car/add-car.component';
 
 @NgModule({
   exports: [CarsListComponent],
   providers: [CarResolve],
-  declarations: [CarsListComponent, CarDetailComponent],
+  declarations: [CarsListComponent, CarDetailComponent, AddCarComponent],
   imports: [
     CommonModule,
     SharedModule,
