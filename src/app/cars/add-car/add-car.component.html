@@ -1,3 +1,29 @@
-<p>
-  add-car works!
-</p>
+<app-header>
+  <h1 header-info>cars list </h1>
+    <div levels>add new car</div>
+</app-header>
+
+<div class="data-container">
+  <form [formGroup] ="carForm">
+    <div class="row form-group">
+      <label>Mark</label>
+      <input formControlName="mark" type="text" class="form-control" placeholder="mark">
+      <label>Model</label>
+      <input  formControlName="model" type="text" class="form-control" placeholder="model">
+      <label>Color</label>
+      <input formControlName="color" type="text" class="form-control" placeholder="color">
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <button class="btn btn-primary" type="submit">add car</button>
+      </div>
+    </div>
+  </form>
+
+<pre>{{carForm.value | json}}</pre>
+<pre>mark input validation state {{carForm.get('mark').valid | json}}</pre>
+<pre>model input validation state {{carForm.get('model').valid | json}}</pre>
+<pre>color input validation state {{carForm.get('color').valid | json}}</pre>
+
+</div>
+

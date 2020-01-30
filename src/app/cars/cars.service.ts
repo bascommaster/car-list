@@ -26,7 +26,7 @@ export class CarsService {
   }
 
   addNewCar(newCar: Car): Observable<Car> {
-    return this.http.post<Car>(`${this.apiUrl}`, newCar);
+    return this.http.post<Car>(`${this.apiUrl}/add`, newCar);
   }
 
   deleteCarById(id: number): Observable<Car> {
