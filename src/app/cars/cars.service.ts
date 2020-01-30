@@ -9,7 +9,7 @@ import { Car } from './models/car';
 })
 export class CarsService {
 
-  apiUrl: string = '/cars';
+  apiUrl: string = '/api/cars';
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class CarsService {
   }
 
   getCarById(id: number): Observable<Car> {
-    return this.http.get<Car>(`${this.apiUrl}/${ id }`);
+    return this.http.get<Car>(`${this.apiUrl}/${id}`);
   }
 
   getCarByColor(color: string): Observable<Array<Car>> {

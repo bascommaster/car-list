@@ -24,18 +24,19 @@ export class CarsListComponent implements OnInit {
   loadCars(): void {
     this.carsService.getCars().subscribe(cars => {
       this.cars = this.carsService.getCars();
+      console.log(cars);
     },
     (error: HttpErrorResponse) => {
       console.log(error.status);
     });
   }
 
-  loadCarById(id: number): void {
-    this.carsService.getCarById(id).subscribe(car => {
-      // this.cars = this.carsService.getCarById(id);
-      console.log(car);
-    });
-  }
+  // loadCarById(id: number): void {
+  //   this.carsService.getCarById(id).subscribe(car => {
+  //     // this.cars = this.carsService.getCarById(id);
+  //     console.log(car);
+  //   });
+  // }
 
   loadCarByColor(color: string): void{
     this.carsService.getCarByColor(color).subscribe(cars => {

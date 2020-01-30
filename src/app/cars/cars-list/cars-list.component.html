@@ -11,13 +11,15 @@
       <table class="cs-table table table-striped">
         <thead>
         <tr>
+          <th>car id</th>
           <th>mark</th>
           <th>model</th>
           <th>color</th>
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let car of cars | async">
+        <tr *ngFor="let car of cars | async" class="row-car" [routerLink]="['/cars', car.id]">
+          <td>{{car.id}}</td>
           <td>{{car.mark}}</td>
           <td>{{car.model}}</td>
           <td>{{car.color}}</td>

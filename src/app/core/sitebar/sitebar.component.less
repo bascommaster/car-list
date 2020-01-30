@@ -1,0 +1,38 @@
+@import "../../../assets/style/variables";
+
+.sidebar{
+  background-color: @blue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 180px;
+
+  .logo{
+    margin: 50px 10px;
+    display: block;
+    width:140px;
+  }
+
+  ul{
+    list-style-type: none;
+    padding-left: 0;
+
+    li{
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      color: @white;
+      padding: 10px 20px;
+      border-bottom: 1px solid @white;
+    }
+
+    li:hover{
+      background-color: #10447d;
+      transition: linear 300ms;
+    }
+
+    li.active{
+      background-color: @cyan;
+    }
+  }
+}
