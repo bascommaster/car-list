@@ -13,23 +13,22 @@ export class AddCarComponent implements OnInit {
 
   car: Car;
   carForm: FormGroup;
+
   constructor(private carService: CarsService,
               private formBuilder: FormBuilder,
               private route: Router) { }
 
   ngOnInit() {
-    // this.addCar(this.car);
     this.carForm = this.buildCarForm();
   }
 
-  addCar(newCar: Car): void{
-    this.carService.addNewCar(newCar).subscribe(car => {
-      console.log(car);
-    });
+  addCar(): void {
+    this.carService.addNewCar(this.carForm.value).subscribe(() => {});
   }
 
-  buildCarForm(){
+  buildCarForm() {
     return this.formBuilder.group({
+      // id: ['', Validators.required],
       mark: ['', Validators.required],
       model: ['', Validators.required],
       color: ['', Validators.required]
