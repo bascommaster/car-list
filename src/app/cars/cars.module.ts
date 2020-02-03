@@ -7,11 +7,12 @@ import { RouterModule } from '@angular/router';
 import { CarResolve } from './car-resolve.service';
 import { AddCarComponent } from './add-car/add-car.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DelCarComponent } from './del-car/del-car.component';
 
 @NgModule({
   exports: [CarsListComponent],
   providers: [CarResolve],
-  declarations: [CarsListComponent, CarDetailComponent, AddCarComponent],
+  declarations: [CarsListComponent, CarDetailComponent, AddCarComponent, DelCarComponent],
   imports: [
     CommonModule,
     SharedModule,
