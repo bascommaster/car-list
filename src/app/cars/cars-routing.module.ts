@@ -18,10 +18,10 @@ const carsRoutes: Routes = [
     component: AddCarComponent,
   },
 
-  // {
-  //   path: 'del',
-  //   component: DelCarComponent,
-  // }
+  {
+    path: 'del',
+    component: DelCarComponent,
+  }
 ];
 
 @NgModule({
