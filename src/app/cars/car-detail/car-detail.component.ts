@@ -11,6 +11,7 @@ import { Car } from '../models/car';
 export class CarDetailComponent implements OnInit {
 
   car: Car;
+  get: {id: number, mark: string, model: string, color: string};
 
   constructor(private carsService: CarsService,
               private route: ActivatedRoute) { }
@@ -27,9 +28,16 @@ export class CarDetailComponent implements OnInit {
     //   console.log(car);
     // });
 
+    const idHeader = document.getElementById('id-header');
+
     // this line is used becouse of resolve.service
+    // tslint:disable-next-line: no-string-literal
     this.car = this.route.snapshot.data['car'];
     console.log(this.car);
+    this.get  = this.car;
+    console.log(this.get.model);
+    idHeader.innerHTML = 'details for car Id: ' + this.get.id;
+
   }
 
 }

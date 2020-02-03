@@ -24,11 +24,17 @@ export class AddCarComponent implements OnInit {
 
   addCar(): void {
     this.carService.addNewCar(this.carForm.value).subscribe(() => {});
+
+    console.log(this.carForm.value);
+    const { mark, model, color } = this.carForm.value;
+    const info = document.getElementById('add-car');
+
+    info.innerHTML = 'new car was added to list! - ' + color + ' ' + mark + ' ' + model;
+    info.style.color = '#667194';
   }
 
   buildCarForm() {
     return this.formBuilder.group({
-      // id: ['', Validators.required],
       mark: ['', Validators.required],
       model: ['', Validators.required],
       color: ['', Validators.required]
