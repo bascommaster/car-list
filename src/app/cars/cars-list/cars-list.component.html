@@ -15,6 +15,7 @@
           <th>mark</th>
           <th>model</th>
           <th>color</th>
+          <th>action</th>
         </tr>
         </thead>
         <tbody>
@@ -23,6 +24,7 @@
           <td>{{car.mark}}</td>
           <td>{{car.model}}</td>
           <td>{{car.color |uppercase}}</td>
+          <td><button type="button" class="btn btn-danger" (click)="removeCar(car.id)">delete</button></td>
         </tr>
         </tbody>
       </table>

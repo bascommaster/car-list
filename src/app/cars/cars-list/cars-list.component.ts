@@ -45,10 +45,8 @@ export class CarsListComponent implements OnInit {
     });
   }
 
-
-  deleteCarById(id: number): void {
-    this.carsService.deleteCarById(id).subscribe(car => {
-      console.log(car);
+  removeCar(id: number) {
+    this.carsService.deleteCarById(id).subscribe(() => {
       this.loadCars();
     },
     error => console.log(error));
