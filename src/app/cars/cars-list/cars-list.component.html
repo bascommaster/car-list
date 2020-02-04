@@ -20,11 +20,11 @@
         </thead>
         <tbody>
         <tr *ngFor="let car of cars | async" class="row-car" [routerLink]="['/cars', car.id]">
-          <td>{{car.id}}</td>
-          <td>{{car.mark}}</td>
-          <td>{{car.model}}</td>
-          <td>{{car.color |uppercase}}</td>
-          <td><button type="button" class="btn btn-danger" (click)="removeCar(car.id)">delete</button></td>
+          <td>{{car?.id}}</td>
+          <td>{{car?.mark}}</td>
+          <td>{{car?.model}}</td>
+          <td>{{car?.color |uppercase}}</td>
+          <td><button class="btn btn-danger" (click)="removeCar(car.id, $event)">delete</button></td>
         </tr>
         </tbody>
       </table>
