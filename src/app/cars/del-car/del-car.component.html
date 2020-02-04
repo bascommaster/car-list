@@ -7,6 +7,15 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="details">
+        <h1>car id to delete: {{carId}}</h1>
+        <h2 id="delete-id-info" ></h2>
+        <h2 id="delete-car-info"></h2>
+
+          <div class="row form-group">
+            <label>car id</label>
+            <input type="text" [(ngModel)]="carId" placeholder="car id" />
+            <button class="btn btn-danger" (click)="removeCarById(carId)">delete</button>
+          </div>
 
       </div>
     </div>

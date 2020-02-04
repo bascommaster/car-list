@@ -6,7 +6,7 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
 import { RouterModule } from '@angular/router';
 import { CarResolve } from './car-resolve.service';
 import { AddCarComponent } from './add-car/add-car.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { DelCarComponent } from './del-car/del-car.component';
 
 @NgModule({
@@ -18,6 +18,7 @@ import { DelCarComponent } from './del-car/del-car.component';
     SharedModule,
     RouterModule,
     ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class CarsModule { }
