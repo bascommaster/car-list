@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Short informatins
 
-This project was made only for education. It is very basic application which allow display cars list, add new car to list, delete car, get cars by id and color. Application needs to work really simple json rest api serve by json server or web application.
+This project was made only for education. It is very basic application which allows display cars list, add new car to list, delete car, get cars by id and color. Application needs to work really simple json rest api serve by json server or web application.
 
 ```json
 {
@@ -15,20 +15,20 @@ This project was made only for education. It is very basic application which all
   color: string
 }
 ```
-For testing this application you can use Sprong boot app from https://github.com/bascommaster/car-list-restapi.git repository.
+For testing this application you can use Spring boot app from https://github.com/bascommaster/car-list-restapi.git repository.
 
 ## Screen shots
 
 ![Car list vue get all](src/assets/img/get-all.png)
  Start view display all cars from list.
 
-![Car list vue get all](src/assets/img/get-by-color.png)
+![Car list vue get car by color](src/assets/img/get-by-color.png)
 Get cars by color. 
 
-![Car list vue get all](src/assets/img/add-new.png)
+![Car list vue add new car](src/assets/img/add-new.png)
 Add new car to list form.
 
-![Car list vue get all](src/assets/img/delete-car.png)
+![Car list vue delete car](src/assets/img/delete-car.png)
 Delete car using id.
 
 ## Development server
