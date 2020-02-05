@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Car } from './models/car';
-import { FormGroup } from '@angular/forms';
 
 
 @Injectable({
@@ -10,7 +9,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class CarsService {
 
-  apiUrl: string = '/api/cars';
+  apiUrl = '/api/cars';
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +22,7 @@ export class CarsService {
   }
 
   getCarByColor(color: string): Observable<Array<Car>> {
-    return this.http.get<Array<Car>>(`${this.apiUrl}/${color}`);
+    return this.http.get<Array<Car>>(`${this.apiUrl}/color/${color}`);
   }
 
   addNewCar(newCar: Car): Observable<Car> {

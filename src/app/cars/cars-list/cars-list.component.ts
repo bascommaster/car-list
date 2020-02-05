@@ -17,8 +17,6 @@ export class CarsListComponent implements OnInit {
 
   ngOnInit() {
     this.loadCars();
-    // this.loadCarById(2);
-    // this.loadCarByColor('red');
   }
 
   loadCars(): void {
@@ -30,13 +28,6 @@ export class CarsListComponent implements OnInit {
       console.log(error.status);
     });
   }
-
-  // loadCarById(id: number): void {
-  //   this.carsService.getCarById(id).subscribe(car => {
-  //     // this.cars = this.carsService.getCarById(id);
-  //     console.log(car);
-  //   });
-  // }
 
   loadCarByColor(color: string): void{
     this.carsService.getCarByColor(color).subscribe(cars => {

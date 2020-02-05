@@ -1,3 +1,36 @@
-<p>
-  show-by-color works!
-</p>
+<app-header>
+  <h1 header-info>cars list </h1>
+    <div levels>get cars by color</div>
+</app-header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="details">
+        <h1 id="car-color">get car by color: {{carColor}}</h1>
+        <div class="row form-group">
+          <label>car color</label>
+          <input type="text" [(ngModel)]="carColor" placeholder="color" />
+          <button class="btn btn-primary" (click)="getCarsByColor(carColor)">show cars</button>
+        </div>
+
+        <table class="cs-table table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>MARK</th>
+              <th>MODEL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let car of cars | async" class="row-car" [routerLink]="['/cars']">
+              <td>{{car.id}}</td>
+              <td>{{car.mark}}</td>
+              <td>{{car.model}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

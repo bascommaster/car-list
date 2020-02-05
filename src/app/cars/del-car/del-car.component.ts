@@ -19,7 +19,6 @@ export class DelCarComponent implements OnInit {
   }
 
   removeCarById(id: number) {
-    const deleteIdInfo = document.getElementById('delete-id-info');
     const deleteCarInfo = document.getElementById('delete-car-info');
 
     this.carService.getCarById(id).subscribe(car => {

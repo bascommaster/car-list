@@ -33,7 +33,6 @@ export class CarDetailComponent implements OnInit {
     // this line is used becouse of resolve.service
     // tslint:disable-next-line: no-string-literal
     this.car = this.route.snapshot.data['car'];
-    console.log(this.car);
     this.get  = this.car;
     console.log(this.get.model);
     idHeader.innerHTML = 'details for car Id: ' + this.get.id;

@@ -4,6 +4,7 @@ import { CarDetailComponent } from './car-detail/car-detail.component';
 import { CarResolve } from './car-resolve.service';
 import { AddCarComponent } from './add-car/add-car.component';
 import { DelCarComponent } from './del-car/del-car.component';
+import { ShowByColorComponent } from './show-by-color/show-by-color.component';
 
 
 const carsRoutes: Routes = [
@@ -16,6 +17,11 @@ const carsRoutes: Routes = [
   {
     path: 'add',
     component: AddCarComponent,
+  },
+
+  {
+    path: 'color',
+    component: ShowByColorComponent
   },
 
   {

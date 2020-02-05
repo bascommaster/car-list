@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CarsService } from '../cars.service';
+import { Car } from '../models/car';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-show-by-color',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowByColorComponent implements OnInit {
 
-  constructor() { }
+  carColor: string;
+  cars: Observable<Car[]>;
+
+  constructor(private carService: CarsService) { }
 
   ngOnInit() {
+  }
+
+  getCarsByColor(color: string) {
+    this.carService.getCarByColor(color).subscribe(car => {
+      this.cars = this.carService.getCarByColor(color);
+      console.log(car);
+    });
   }
 
 }
