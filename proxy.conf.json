@@ -1,6 +1,6 @@
 {
   "/api/cars": {
-    "target": "http://localhost:8080",
+    "target": "https://cars-list.herokuapp.com",
     "secure": false
   }
 }
