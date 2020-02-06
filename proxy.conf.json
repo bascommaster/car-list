@@ -2,5 +2,6 @@
   "/api/cars": {
     "target": "https://cars-list.herokuapp.com",
     "secure": false
-  }
+  },
+  "changeOrigin": true
 }
