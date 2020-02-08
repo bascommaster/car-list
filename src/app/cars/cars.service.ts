@@ -3,6 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Car } from './models/car';
+import { environment } from './../../environments/environment';
 
 
 @Injectable({
@@ -10,7 +11,8 @@ import { Car } from './models/car';
 })
 export class CarsService {
 
-  apiUrl = '/api/cars';
+  // apiUrl = 'https://cors-anywhere.herokuapp.com/cars-list.herokuapp.com/api/cars/';
+  apiUrl = environment.URL_API;
 
   constructor(private http: HttpClient) { }
 
